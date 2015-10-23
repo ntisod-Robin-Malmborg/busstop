@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Tidtabell</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+</head>
+<body>
+{%  for departure in departures %}
+    {{departure}}
+{% endfor %}
+    <div id="container">
+        <table id="tablept">
+            <thead>
+                <tr>
+                    <th id="thmain" th colspan="4">
+						<div id="clock">
+						</div>
+						<div>
+							<p>Södertälje Hamn - Pendeltåg</p>
+						</div>
+					</th>
+                </tr>
+                <tr>
+                    <th class="th">Tidtabell</th>
+                    <th class="th">Realtid</th>
+					<th class="th">Spår</th>
+					<th class="th">Linje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td">
+                        {%  for departure in departures %}
+                            {{departure['ExpectedDateTime'] }}<br>
+                         {% endfor %}
+                    </td>
+                    <td class="td">
+                        {%  for departure in departures %}
+                            {{departure['DisplayTime'] }}<br>
+                         {% endfor %}
+                    </td>
+					<td class="td">
+                        {%  for departure in departures %}
+                            {{departure['StopPointDesignation'] }}<br>
+                         {% endfor %}
+                    </td>
+					<td class="td">
+                        {%  for departure in departures %}
+                            {{departure['LineNumber'] }}
+                            {{departure['Destination'] }}<br>
+                         {% endfor %}
+                    </td>
+                </tr>
+            </tbody>
+			</table>
+		</div>
+		<div>
+			<table id="tableb">
+				<thead>
+                <tr>
+                    <th id="thmain" th colspan="4">
+						<div>
+							<p>Balticvägen - Bussar</p>
+						</div>
+					</th>
+                </tr>
+                <tr>
+                    <th class="th">Tidtabell</th>
+					<th class="th">Realtid</th>
+					<th class="th">Linje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td"></td>
+                    <td class="td"></td>
+					<td class="td"></td>
+                </tr>
+                <tr>
+                    <td class="td"></td>
+                    <td class="td"></td>
+					<td class="td"></td>
+                </tr>
+
+                <tr>
+                    <td class="td"></td>
+                    <td class="td"></td>
+					<td class="td"></td>
+                </tr>
+				<!--<tr>
+					<th id="thbot" colspan="4">Störningsinfo:
+                    </th>
+                </tr>-->
+            </tbody>
+			</table>
+   		</div>
+</body>
+</html>

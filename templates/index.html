@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 </head>
 <body>
-{%  for departure in departures %}
-    {{departure}}
-{% endfor %}
     <div id="container">
         <table id="tablept">
             <thead>
@@ -31,25 +28,25 @@
             <tbody>
                 <tr>
                     <td class="td">
-                        {%  for departure in departures %}
+                        {%  for departure in departurest %}
                             {{departure['ExpectedDateTime'] }}<br>
-                         {% endfor %}
+                        {% endfor %}
                     </td>
                     <td class="td">
-                        {%  for departure in departures %}
+                        {%  for departure in departurest %}
                             {{departure['DisplayTime'] }}<br>
-                         {% endfor %}
+                        {% endfor %}
                     </td>
 					<td class="td">
-                        {%  for departure in departures %}
+                        {%  for departure in departurest %}
                             {{departure['StopPointDesignation'] }}<br>
-                         {% endfor %}
+                        {% endfor %}
                     </td>
 					<td class="td">
-                        {%  for departure in departures %}
+                        {%  for departure in departurest %}
                             {{departure['LineNumber'] }}
                             {{departure['Destination'] }}<br>
-                         {% endfor %}
+                        {% endfor %}
                     </td>
                 </tr>
             </tbody>
@@ -73,27 +70,29 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="td"></td>
-                    <td class="td"></td>
-					<td class="td"></td>
-                </tr>
-                <tr>
-                    <td class="td"></td>
-                    <td class="td"></td>
-					<td class="td"></td>
-                </tr>
-
-                <tr>
-                    <td class="td"></td>
-                    <td class="td"></td>
-					<td class="td"></td>
+                    <td class="td">
+                        {%  for departure in departuresb %}
+                            {{departure['ExpectedDateTime'] }}<br>
+                        {% endfor %}
+                    </td>
+                    <td class="td">
+                        {%  for departure in departuresb %}
+                            {{departure['DisplayTime'] }}<br>
+                        {% endfor %}
+                    </td>
+					<td class="td">
+                        {%  for departure in departuresb %}
+                            {{departure['LineNumber'] }}
+                            {{departure['Destination'] }}<br>
+                        {% endfor %}
+                    </td>
                 </tr>
 				<!--<tr>
 					<th id="thbot" colspan="4">Störningsinfo:
                     </th>
                 </tr>-->
-            </tbody>
+                </tbody>
 			</table>
-   		</div>
-</body>
+        </div>
+    </body>
 </html>

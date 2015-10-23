@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*text colour*/
+p {
+	color:#000F;
+}
+#stuff1 {
+
+	float:left;
+	border: 2px solid #000;
+}
+
+#stuff2 {
+
+	float:right;
+	border: 2px solid #000;
+}
+
+/*regular divs*/
+.tdiv {
+
+	border: 2px solid #000;
+
+}
+/*main table header*/
+#thmain {
+
+	border:1px solid black;
+	text-align:center;
+	background-color:#0099FF;
+
+}
+/*delayed departures*/
+#thdelay {
+
+	color:#FF0000;
+	border:1px solid black;
+
+}
+/*train table*/
+#tablept {
+
+	border-collapse:collapse;
+	width:400px;
+
+}
+/*bus table*/
+#tableb {
+
+	border-collapse:collapse;
+	width:400px;
+
+}
+/*main table divs*/
+.td {
+
+	padding:5px;
+	border:1px solid black;
+
+}
+/*other table headers*/
+.th {
+
+	padding:5px;
+	border:1px solid black;
+
+}
+/*bottom table header*/
+#thbot {
+
+	text-align:left;
+	padding:5px;
+	border:1px solid black;
+
+}
+/*css for the clock*/
+#clock {
+
+	padding:5px;
+	float:left;
+
+}
+/*main content div*/
+#container {
+
+	position:relative;
+
+}

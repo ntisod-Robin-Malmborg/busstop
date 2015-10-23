@@ -1,7 +1,6 @@
 import requests
 
 from settings import key_plats,key_real
-#from datetime import datetime
 
 
 def sites(searchstring):
